@@ -10,7 +10,7 @@
     <script src="node_modules/tree-operations/distrib/tree-operations.min.js"></script>
 
 
-
+# Methods
 ## fromArray
 
     TreeOps.fromArray(arr,predicateChild, childrenPropertyName);
@@ -290,7 +290,7 @@ where
     )
 
     /*
-        node1 {"id":1,"parent":0,"title":"Title 1","childrens":[{"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]},{"id":12,"parent":1,"title":"Title 1.2","childrens":[{"id":121,"parent":12,"title":"Title 1.2.1"}]},{"id":13,"parent":1,"title":"Title 1.3"}]}
+        node1  {"id":1,"parent":0,"title":"Title 1","childrens":[{"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]},{"id":12,"parent":1,"title":"Title 1.2","childrens":[{"id":121,"parent":12,"title":"Title 1.2.1"}]},{"id":13,"parent":1,"title":"Title 1.3"}]}
 
 
     node13 {"id":13,"parent":1,"title":"Title 1.3"}
