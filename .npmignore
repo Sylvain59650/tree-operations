@@ -5,3 +5,4 @@ sources/
 .vscode
 gulpfile.js
 .gitignore
+.npmignore
