@@ -1,5 +1,4 @@
-//require("../distrib/tree-operations.min.js");
-require("../sources/tree-operations.js");
+var TreeOps = require("../sources/tree-operations.js");
 
 var flatten = [
   { id: 1, parent: 0, title: "Title 1" },
@@ -20,8 +19,20 @@ var flatten = [
   { id: 1212, parent: 121, title: "Title 1.2.1.2" }
 ];
 
-var tree = flatten.unflatten(
-  (node, parentNode) => node.parent === parentNode.id, "childrens"
+var tree = TreeOps.fromArray(
+  flatten,
+  (node, parentNode) => node.parent === parentNode.id,
+  "childrens"
+)
+console.log(JSON.stringify(tree));
+var list = TreeOps.toFlatArray(
+  tree,
+  "childrens",
+  false
 )
 
-console.log(JSON.stringify(tree));
+var a = JSON.stringify(flatten);
+var b = JSON.stringify(list);
+console.log(a);
+console.log("");
+console.log(b);

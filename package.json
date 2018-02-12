@@ -1,6 +1,6 @@
 {
   "name": "tree-operations",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "description": "create a tree from an array of objects or a flat array from tree, and others operations on tree",
   "main": "distrib/tree-operations.min.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Sylvain59650/tree-operations.git"
   },
+  "keywords": ["tree", "flatten", "unflatten", "find", "recursive"],
   "author": "Sylvain Longepée",
   "license": "MIT",
   "bugs": {

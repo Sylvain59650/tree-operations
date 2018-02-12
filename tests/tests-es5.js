@@ -9,7 +9,7 @@ var dataMapped = data.map(function (x) {
 });
 dataMapped[0].parentUid = null;
 
-var tree = dataMapped.unflatten(function (node, parentNode) {
+var tree = TreeOps.fromArray(dataMapped, function (node, parentNode) {
   return node.parentUid === parentNode.Uid;
 });
 

@@ -1,4 +1,4 @@
-var tree = require("../distrib/tree-operations.min.js");
+var TreeOps = require("../distrib/tree-operations.min.js");
 
 var data = require("./graph.json");
 var dataMapped = data.map(x => {
@@ -10,7 +10,8 @@ var dataMapped = data.map(x => {
 });
 dataMapped[0].parentUid = null;
 
-var tree = dataMapped.unflatten(
+var tree = TreeOps.fromArray(
+  dataMapped,
   (node, parentNode) => node.parentUid === parentNode.Uid
 );
 console.log(JSON.stringify(tree));

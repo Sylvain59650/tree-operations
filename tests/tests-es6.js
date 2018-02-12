@@ -7,7 +7,8 @@ var dataMapped = data.map(x => {
 });
 dataMapped[0].parentUid = null;
 
-var tree = dataMapped.unflatten(
+var tree = TreeOps.fromArray(
+  dataMapped,
   (node, parentNode) => node.parentUid === parentNode.Uid
 );
 
