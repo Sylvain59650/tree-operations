@@ -1,6 +1,6 @@
 {
   "name": "tree-operations",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "create a tree from an array of objects or a flat array from tree, and others operations on tree",
   "main": "distrib/tree-operations.min.js",
   "scripts": {

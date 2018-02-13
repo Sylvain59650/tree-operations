@@ -16,7 +16,7 @@ gulp.task("tree-operations.min.js", () => {
     .pipe(concat("tree-operations.min.js"))
     .pipe(babel({
       presets: ["es2015"],
-      compact: false
+      compact: true
     }))
     .pipe(gulp.dest("./distrib"))
 });

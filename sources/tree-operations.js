@@ -1,6 +1,6 @@
 /**
  * @license
- * tree-operations 0.0.1
+ * tree-operations 0.9.1
  * Copyright Sylvain Longepée
  * Released under MIT license <https://github.com/Sylvain59650/tree-operations/blob/master/LICENSE>
  */
