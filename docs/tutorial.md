@@ -317,7 +317,9 @@ where
     fieldsNames : list of fields to keep
 ### example  
 
-
+    var tree=[**example below in table];
+    tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
+    // select id, tri and children in each node of tree
 <table>
 <tr><th>Before</th><th>After</th></tr>
 <tr>
@@ -356,6 +358,7 @@ where
     ]}];
 </td>
 <td>
+
     [{
     "title": "Title 1",
     "childrens": [{
@@ -407,6 +410,8 @@ var tree=[**example below in table**];
         (x, y) => (x.tri < y.tri) ? -1 : (x.tri > y.tri) ? 1 : 0,
         "childrens"
     );
+    // order the tree according value of tri
+
 <table>
 <tr><th>Before</th><th>After</th></tr>
 <tr>
