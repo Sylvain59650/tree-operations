@@ -83,6 +83,36 @@
     return undefined;
   }
 
+  TreeOps.orderBy = function(tree, childrenComparaison, childrenPropertyName = "childs") {
+    if (!tree) return undefined;
+    for (var branch of tree) {
+      var childrens = branch[childrenPropertyName];
+      if (!childrens) continue;
+      branch[childrenPropertyName] = childrens.sort(childrenComparaison);
+      branch[childrenPropertyName] = this.orderBy(branch[childrenPropertyName], childrenComparaison, childrenPropertyName);
+    }
+    return tree;
+  }
+
+  TreeOps.selectNew = function(tree, childrenPropertyName = "childs", ...fieldsNames) {
+    var arr = [];
+    for (var i = 0; i < tree.length; i++) {
+      var item = {};
+      for (var f of fieldsNames) {
+        item[f] = tree[i][f];
+      }
+      if (!item[childrenPropertyName] && tree[i][childrenPropertyName]) {
+        item[childrenPropertyName] = tree[i][childrenPropertyName];
+      }
+      if (item[childrenPropertyName] && item[childrenPropertyName].length > 0) {
+        item[childrenPropertyName] = this.selectNew(item[childrenPropertyName], childrenPropertyName, ...fieldsNames);
+      }
+      arr.push(item);
+    }
+    return arr;
+  }
+
+
   return TreeOps;
 
 }));

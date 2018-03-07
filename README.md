@@ -9,7 +9,8 @@
 - [fromArray](https://github.com/Sylvain59650/tree-operations/blob/master/docs/tutorial.md#fromarray) : create a tree from an array of objects
 - [toFlatArray](https://github.com/Sylvain59650/tree-operations/blob/master/docs/tutorial.md#toFlatArray) : create a flat list from an tree 
 - [find](https://github.com/Sylvain59650/tree-operations/blob/master/docs/tutorial.md#find) : find a node in a tree
-
+- [selectNew](https://github.com/Sylvain59650/tree-operations/blob/master/docs/tutorial.md#selectnew) : filters the properties of the nodes of the tree
+- [orderBy](https://github.com/Sylvain59650/tree-operations/blob/master/docs/tutorial.md#orderby) : order the leaves of the tree respecting the structure of the tree
 ## Installation
 
     npm install tree-operations --save
