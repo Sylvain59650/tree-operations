@@ -38,12 +38,10 @@ var tree = [{
   ]
 }];
 
+console.log("tree", JSON.stringify(tree, null, 5));
+
 tree = TreeOps.orderBy(
   tree,
   (x, y) => (x.tri < y.tri) ? -1 : (x.tri > y.tri) ? 1 : 0,
   "childrens"
 )
-
-
-
-console.log("tree", JSON.stringify(tree, null, 5));
