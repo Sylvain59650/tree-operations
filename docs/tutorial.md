@@ -307,7 +307,8 @@ where
 
 ## selectNew
 
-  TreeOps.selectNew(tree, childrenPropertyName = "childs", ...fieldsNames)
+    TreeOps.selectNew(tree, childrenPropertyName = "childs", ...fieldsNames)
+
 where
 
     tree: hierarchical array
@@ -317,7 +318,8 @@ where
     fieldsNames : list of fields to keep
 ### example  
 
-    var tree=[**example below in table];
+ var tree=[**example below in table**];
+
     tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
     // select id, tri and children in each node of tree
 <table>
@@ -393,7 +395,10 @@ where
 <a name="orderby"></a>
 
 ## orderBy
-TreeOps.orderBy(tree, childrenComparaison, childrenPropertyName = "childs")
+
+    TreeOps.orderBy(tree, childrenComparaison, childrenPropertyName = "childs")
+
+where
 
     tree: hierarchical array
 
