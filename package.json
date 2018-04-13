@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/Sylvain59650/tree-operations#readme",
   "dependencies": {
-    "find-polyfill": "^1.0.1",
-    "npm": "^5.8.0"
+    "find-polyfill": "^1.0.1"
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
