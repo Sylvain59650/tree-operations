@@ -7,20 +7,20 @@
 
 ;
 (function(moduleName, root, factory) {
-  if (typeof define === 'function' && define.amd) {
+  if (typeof define === "function" && define.amd) {
     // define([""], factory);
-  } else if (typeof exports === 'object') {
+  } else if (typeof exports === "object") {
     module.exports = factory();
   } else {
     window.TreeOps = factory();
   }
-}("TreeModule", this, function() {
-  'use strict';
+}("TreeModule", null, function() {
+  "use strict";
 
   function TreeOps() {}
 
   TreeOps.toFlatArray = function(tree, childrenPropertyName, reversible) {
-    if (reversible != true) reversible = false;
+    if (reversible !== true) { reversible = false; }
     var stack = (tree && tree.length) ? [{ pointer: tree, offset: 0, ref: null }] : [];
     var flat = [];
     var current = null;
@@ -69,14 +69,14 @@
   }
 
   TreeOps.find = function(tree, predicateFind, predicateChild, childrenPropertyName = "childs") {
-    if (!tree) return undefined;
+    if (!tree) { return undefined; }
     var found = tree.find(predicateFind);
     if (found) {
       return found;
     }
     for (var branch of tree) {
       var childrens = branch[childrenPropertyName];
-      if (!childrens) continue;
+      if (!childrens) { continue; }
       found = this.find(childrens, predicateFind, predicateChild, childrenPropertyName);
       if (found) { return found; }
     }
@@ -84,10 +84,10 @@
   }
 
   TreeOps.orderBy = function(tree, childrenComparaison, childrenPropertyName = "childs") {
-    if (!tree) return undefined;
+    if (!tree) { return undefined; }
     for (var branch of tree) {
       var childrens = branch[childrenPropertyName];
-      if (!childrens) continue;
+      if (!childrens) { continue; }
       branch[childrenPropertyName] = childrens.sort(childrenComparaison);
       branch[childrenPropertyName] = this.orderBy(branch[childrenPropertyName], childrenComparaison, childrenPropertyName);
     }

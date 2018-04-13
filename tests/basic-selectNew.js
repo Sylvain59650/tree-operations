@@ -1,4 +1,7 @@
-//require("../distrib/tree-operations.min.js");
+"use strict";
+import { test } from "ava";
+
+
 var TreeOps = require("../sources/tree-operations.js");
 
 var tree = [
@@ -45,5 +48,45 @@ var tree = [
   }
 ];
 
-tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
-console.log("tree", JSON.stringify(tree));
+var expected = [
+  { "id": 0, "tri": 6 },
+  {
+    "id": 1,
+    "tri": 4,
+    "childrens": [{
+        "id": 11,
+        "tri": 2,
+        "childrens": [
+          { "id": 111, "tri": 7 },
+          {
+            "id": 112,
+            "tri": 1,
+            "childrens": [
+              { "id": 1121, "tri": undefined }
+            ]
+          },
+          { "id": 113, "tri": 5 },
+          { "id": 114, "tri": 2 }
+        ]
+      },
+      {
+        "id": 12,
+        "tri": 2,
+        "childrens": [
+          { "id": 121, "tri": 2 },
+          { "id": 122, "tri": 1 },
+          { "id": 123, "tri": 4 }
+        ]
+      },
+      { "id": 13, "tri": 7 },
+      { "id": 14, "tri": 6 }
+    ]
+  }
+];
+
+
+test("toFlatArray", t => {
+  tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
+
+  t.deepEqual(tree, expected);
+});

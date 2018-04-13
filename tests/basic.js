@@ -1,4 +1,6 @@
-var TreeOps = require("../sources/tree-operations.js");
+import { test } from "ava";
+
+const TreeOps = require("../sources/tree-operations.js");
 
 var flatten = [
   { id: 1, parent: 0, title: "Title 1" },
@@ -24,15 +26,24 @@ var tree = TreeOps.fromArray(
   (node, parentNode) => node.parent === parentNode.id,
   "childrens"
 )
-console.log(JSON.stringify(tree));
+
 var list = TreeOps.toFlatArray(
   tree,
   "childrens",
   false
 )
 
-var a = JSON.stringify(flatten);
-var b = JSON.stringify(list);
-console.log(a);
-console.log("");
-console.log(b);
+test("toFlatArray", t => {
+  var tree = TreeOps.fromArray(
+    flatten,
+    (node, parentNode) => node.parent === parentNode.id,
+    "childrens"
+  )
+
+  t.deepEqual(TreeOps.toFlatArray(
+      tree,
+      "childrens",
+      false
+    ).sort((x, y) => x.id < y.id ? 1 : -1),
+    flatten.sort((x, y) => x.id < y.id ? 1 : -1));
+});
