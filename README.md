@@ -6,6 +6,7 @@
 ![version](https://img.shields.io/npm/v/tree-operations.svg)
 ![package](https://img.shields.io/github/package-json/v/Sylvain59650/tree-operations.svg)
 ![dependencies](https://img.shields.io/david/Sylvain59650/tree-operations.svg)
+[![dependencies graph](https://img.shields.io/badge/dependencies-graph-blue.svg)](http://npm.anvaka.com/#/view/2d/tree-operations)
 ![minified](https://img.shields.io/bundlephobia/min/tree-operations.svg)
 ![linter](https://img.shields.io/badge/eslint-ok-blue.svg)
 ![tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)
