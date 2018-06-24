@@ -60,7 +60,7 @@
   <article>
     <h1>fromArray</h1>
     <pre>
-        <p class="signature"></p>TreeOps.fromArray(arr,predicateChild, childrenPropertyName);
+        <p class="signature"></p>TreeOps.fromArray(arr, predicateChild, childrenPropertyName);
     <p class="arg" />
         arr:
         flat array of objects
@@ -188,7 +188,6 @@
     <pre> 
        <p class="signature"></p> TreeOps.toFlatArray(tree, childrenPropertyName, reversible)
 
-    where
     <p class="arg" />
         tree: hierarchical array
     
@@ -269,7 +268,6 @@
     <pre>
     
       <p class="signature"></p>TreeOps.find(tree, predicateFind, predicateChild, childrenPropertyName = "childs")
-    where
     <p class="arg" /></p>
         tree: hierarchical array
     
@@ -368,8 +366,7 @@
     <pre>
      <p class="signature"></p> TreeOps.selectNew(tree, childrenPropertyName = "childs", ...fieldsNames)
     
-    where
-    <p class="arg" /></p>
+    <p class="arg" />
         tree: hierarchical array
     
         childrenPropertyName: name of new property in each node to store childrens. Default is "childs".
@@ -461,8 +458,7 @@
     
     <p class="signature"></p>TreeOps.orderBy(tree, childrenComparaison, childrenPropertyName = "childs")
     
-    where
-    <p class="arg" /></p>
+    <p class="arg" />
         tree: hierarchical array
     
         childrenComparaison: comparaison function of two nodes (function with 2 arguments)
