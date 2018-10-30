@@ -2,201 +2,194 @@
 
 <head>
   <title>tree-operations</title>
-  <link href="https://sylvain59650.github.io/demonstrator/css/style.css" type="text/css" rel="stylesheet" />
-  <link href="https://sylvain59650.github.io/demonstrator/css/demo.css" type="text/css" rel="stylesheet" />
+  <link href="https://sylvain59650.github.io/demonstrator/css/theme1.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="breadcrumb">
-    <a href="https://www.npmjs.com/package/tree-operations" title="NPM">
-      <img src="https://sylvain59650.github.io/demonstrator/img/npm.png" height="32"></a>
-    <a href="https://github.com/Sylvain59650/tree-operations" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
-  </div>
+  <div class="container">
+    <div>
+      <a href="https://www.npmjs.com/package/tree-operations" title="NPM">
+        <img src="https://sylvain59650.github.io/demonstrator/img/npm.png" height="32"></a>
+      <a href="https://github.com/Sylvain59650/tree-operations" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
+    </div>
 
-  <div class="breadcrumb">
-    <a class="breadcrumb" href="../index.html">Home</a> &gt;
-    <h1 class="breadcrumb">API for tree-operations</h1>
-  </div>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <h1>tree-operations</h1>
+    </div>
 
-  <div style="display:inline">
-    <a target="_blank" title="build" href="https://travis-ci.org/Sylvain59650/tree-operations"><img src="https://travis-ci.org/Sylvain59650/tree-operations.png?branch=master" /></a>
-    <a target="_blank" title="version" href="https://www.npmjs.com/package/tree-operations"><img src="https://img.shields.io/npm/v/tree-operations.svg" /></a>
-    <a target="_blank" title="package" href="https://github.com/Sylvain59650/tree-operations"><img src="https://img.shields.io/github/package-json/v/Sylvain59650/tree-operations.svg" /></a>
-    <a target="_blank" title="dependencies" href="https://david-dm.org/Sylvain59650/tree-operations"><img src="https://img.shields.io/david/Sylvain59650/tree-operations.svg" /></a>
-    <a target="_blank" title="dependencies graph" href="http://npm.anvaka.com/#/view/2d/tree-operations"><img src="https://img.shields.io/badge/dependencies-graph-blue.svg" /></a>
-    <img src="https://img.shields.io/bundlephobia/min/tree-operations.svg" />
-    <img src="https://img.shields.io/badge/eslint-ok-blue.svg" />
-    <a target="_blank" title="tests" href="https://sylvain59650.github.io/tree-operations/"><img src="https://img.shields.io/badge/tests-passing-brightgreen.svg" /></a>
-    <a target="_blank" title="downloads" href="https://www.jsdelivr.com/package/npm/tree-operations"><img src="https://data.jsdelivr.com/v1/package/npm/tree-operations/badge" /></a>
-    <a target="_blank" title="cdn" href="https://cdn.jsdelivr.net/npm/tree-operations/distrib/tree-operations.min.js"><img src="https://img.shields.io/badge/cdn-jsdeliv-black.svg" /></a>
-    <img src="https://img.shields.io/npm/l/tree-operations.svg" />
-    <img src="https://hits.dwyl.com/Sylvain59650/tree-operations.svg" />
-  </div>
+    <div style="display:inline">
+      <a target="_blank" title="build" href="https://travis-ci.org/Sylvain59650/tree-operations"><img src="https://travis-ci.org/Sylvain59650/tree-operations.png?branch=master" /></a>
+      <a target="_blank" title="version" href="https://www.npmjs.com/package/tree-operations"><img src="https://img.shields.io/npm/v/tree-operations.svg" /></a>
+      <a target="_blank" title="package" href="https://github.com/Sylvain59650/tree-operations"><img src="https://img.shields.io/github/package-json/v/Sylvain59650/tree-operations.svg" /></a>
+      <a target="_blank" title="dependencies" href="https://david-dm.org/Sylvain59650/tree-operations"><img src="https://img.shields.io/david/Sylvain59650/tree-operations.svg" /></a>
+      <a target="_blank" title="dependencies graph" href="http://npm.anvaka.com/#/view/2d/tree-operations"><img src="https://img.shields.io/badge/dependencies-graph-blue.svg" /></a>
+      <img src="https://img.shields.io/bundlephobia/min/tree-operations.svg" />
+      <img src="https://img.shields.io/badge/eslint-ok-blue.svg" />
+      <a target="_blank" title="tests" href="https://sylvain59650.github.io/tree-operations/"><img src="https://img.shields.io/badge/tests-passing-brightgreen.svg" /></a>
+      <a target="_blank" title="downloads" href="https://www.jsdelivr.com/package/npm/tree-operations"><img src="https://data.jsdelivr.com/v1/package/npm/tree-operations/badge" /></a>
+      <a target="_blank" title="cdn" href="https://cdn.jsdelivr.net/npm/tree-operations/distrib/tree-operations.min.js"><img src="https://img.shields.io/badge/cdn-jsdeliv-black.svg" /></a>
+      <img src="https://img.shields.io/npm/l/tree-operations.svg" />
+      <img src="https://hits.dwyl.com/Sylvain59650/tree-operations.svg" />
+    </div>
 
-  <h1>prerequisites</h1>
-  <h2>for NodeJs</h2>
-  <xmp>var TreeOps=require("tree-operations");</xmp>
+    <h1>prerequisites</h1>
+    <h2>for NodeJs</h2>
+    <code><xmp>var TreeOps=require("tree-operations");</xmp></code>
 
 
-  <h2>for browser</h2>
-  <xmp>
+    <h2>for browser</h2>
+    <code><xmp>
     <script src="node_modules/find-polyfill/distrib/find-polyfill.min.js"></script>
 
     <script src="node_modules/tree-operations/distrib/tree-operations.min.js"></script>
-  </xmp>
+  </xmp></code>
 
 
-  <nav>
-    <ul>
+    <nav>
       <li><a href="#fromArray">fromArray</a></li>
       <li><a href="#toFlatArray">toFlatArray</a></li>
       <li><a href="#find">find</a></li>
       <li><a href="#selectnew">selectnew</a></li>
       <li><a href="#orderby">orderby</a></li>
-    </ul>
-  </nav>
+    </nav>
 
-  <a name="fromArray"></a>
-  <article>
-    <h1>fromArray</h1>
-    <pre>
-        <p class="signature"></p>TreeOps.fromArray(arr, predicateChild, childrenPropertyName);
-    <p class="arg" />
-        arr:
-        flat array of objects
-    
-        predicateChild:
-        function has 2 parameters (2 array elements) that returns true if they are linked by the parent / child relationship.
-    
-        childrenPropertyName:
-          name of new property in each node to store childrens. 
-          Default is "childs"
+    <a name="fromArray"></a>
+    <article>
+      <h2>fromArray</h2>
+      <div class="signature">
+        <p>TreeOps.fromArray(<i>arr</i>, <i>predicateChild</i>, <i>childrenPropertyName</i>)</p>
+      </div>
+      <div class="arg">
+        <p><i>arr</i>flat array of objects</p>
+        <p><i>predicateChild</i>function has 2 parameters (2 array elements) that returns true if they are linked by the parent / child relationship.
         </p>
-          var arr = [
-            {id:..., parent:..., prop1:...,prop2:...},
-            {id:..., parent:..., prop1:...,prop2:...},
-            {id:..., parent:..., prop1:...,prop2:...},
-            {id:..., parent:..., prop1:...,prop2:...},
-            {id:..., parent:..., prop1:...,prop2:...},
-            {id:..., parent:..., prop1:...,prop2:...}
-        ];
-    
-        I want a tree that 
-            links the elements by the id and parent properties,
-            the child elements will be in a table named childrens
-        So
-    
-        var tree = TreeOps.fromArray(
-            arr,
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens" 
-        );
-    
-    <p class="example"></p>
-    
-        var flatten = [
-        { id: 1, parent: 0, title: "Title 1" },
-        { id: 11, parent: 1, title: "Title 1.1" },
-        { id: 111, parent: 11, title: "Title 1.1.1" },
-        { id: 112, parent: 11, title: "Title 1.1.2" },
-        { id: 113, parent: 11, title: "Title 1.1.3" },
-        { id: 1213, parent: 121, title: "Title 1.2.1.3" },
-        { id: 12131, parent: 1213, title: "Title 1.2.1.3.1" },
-        { id: 12132, parent: 1213, title: "Title 1.2.1.3.2" },
-        { id: 2, parent: 0, title: "Title 2" },
-        { id: 21, parent: 2, title: "Title 2.1" },
-        { id: 12, parent: 1, title: "Title 1.2" },
-        { id: 13, parent: 1, title: "Title 1.3" },
-        { id: 121, parent: 12, title: "Title 1.2.1" },
-        { id: 1211, parent: 121, title: "Title 1.2.1.1" },
-        { id: 1212, parent: 121, title: "Title 1.2.1.2" }
-        ];
-    
-        var tree = TreeOps.fromArray(
-            flatten,
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens"
-        )
-    
-    output:
-    
-        [
-            {
-                "id":1,"parent":0,"title":"Title 1",
-                "childrens":[
-                    {
-                        "id":11,"parent":1,"title":"Title 1.1",
-                        "childrens":[
-                            {
-                                "id":111,"parent":11,"title":"Title 1.1.1"
-                            },
-                            {
-                                "id":112,"parent":11,"title":"Title 1.1.2"
-                            },
-                            {
-                                "id":113,"parent":11,"title":"Title 1.1.3"
-                            }
-                        ]
-                    },
-                    {
-                        "id":12,"parent":1,"title":"Title 1.2",
-                        "childrens":[
-                            {
-                                "id":121,"parent":12,"title":"Title 1.2.1",
-                                "childrens":[
-                                    {
-                                        "id":1213,"parent":121,"title":"Title 1.2.1.3",
-                                        "childrens":[
-                                            {
-                                                "id":12131,"parent":1213,"title":"Title 1.2.1.3.1"
-                                            },
-                                            {
-                                                "id":12132,"parent":1213,"title":"Title 1.2.1.3.2"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id":1211,"parent":121,"title":"Title 1.2.1.1"
-                                    },
-                                    {
-                                        "id":1212,"parent":121,"title":"Title 1.2.1.2"
-                                    }
-                                ]
-                            }
-                        ]
-                },
-                {
-                    "id":13,"parent":1,"title":"Title 1.3"
-                }
-            ]
-        },
+        <p><i>childrenPropertyName</i>name of new property in each node to store childrens. Default is "childs"</p>
+      </div>
+
+      <code><xmp>
+          Given
+          var arr = [ 
+           {id:..., parent:..., prop1:...,prop2:...},
+           {id:..., parent:..., prop1:...,prop2:...}, 
+           {id:..., parent:..., prop1:...,prop2:...}, 
+           {id:..., parent:..., prop1:...,prop2:...}, 
+           {id:..., parent:..., prop1:...,prop2:...}, 
+           {id:..., parent:..., prop1:...,prop2:...}
+          ];
+      </xmp></code> I want a tree that links the elements by the id and parent properties, the child elements will be in a table named childrens So
+
+      <code><xmp>
+            var tree = TreeOps.fromArray( arr, (node, parentNode) => node.parent === parentNode.id, "childrens" );
+      </xmp></code>
+
+
+      <p class="example"></p>
+      <code><xmp>
+    var flatten = [
+    { id: 1, parent: 0, title: "Title 1" },
+    { id: 11, parent: 1, title: "Title 1.1" },
+    { id: 111, parent: 11, title: "Title 1.1.1" },
+    { id: 112, parent: 11, title: "Title 1.1.2" },
+    { id: 113, parent: 11, title: "Title 1.1.3" },
+    { id: 1213, parent: 121, title: "Title 1.2.1.3" },
+    { id: 12131, parent: 1213, title: "Title 1.2.1.3.1" },
+    { id: 12132, parent: 1213, title: "Title 1.2.1.3.2" },
+    { id: 2, parent: 0, title: "Title 2" },
+    { id: 21, parent: 2, title: "Title 2.1" },
+    { id: 12, parent: 1, title: "Title 1.2" },
+    { id: 13, parent: 1, title: "Title 1.3" },
+    { id: 121, parent: 12, title: "Title 1.2.1" },
+    { id: 1211, parent: 121, title: "Title 1.2.1.1" },
+    { id: 1212, parent: 121, title: "Title 1.2.1.2" }
+    ];
+
+    var tree = TreeOps.fromArray(
+        flatten,
+        (node, parentNode) => node.parent === parentNode.id,
+        "childrens"
+    )
+
+output:
+
+    [
         {
-            "id":2,"parent":0,"title":"Title 2",
+            "id":1,"parent":0,"title":"Title 1",
             "childrens":[
                 {
-                    "id":21,"parent":2,"title":"Title 2.1"
-                }
-            ];
-        }
-    ]
-  </pre>
+                    "id":11,"parent":1,"title":"Title 1.1",
+                    "childrens":[
+                        {
+                            "id":111,"parent":11,"title":"Title 1.1.1"
+                        },
+                        {
+                            "id":112,"parent":11,"title":"Title 1.1.2"
+                        },
+                        {
+                            "id":113,"parent":11,"title":"Title 1.1.3"
+                        }
+                    ]
+                },
+                {
+                    "id":12,"parent":1,"title":"Title 1.2",
+                    "childrens":[
+                        {
+                            "id":121,"parent":12,"title":"Title 1.2.1",
+                            "childrens":[
+                                {
+                                    "id":1213,"parent":121,"title":"Title 1.2.1.3",
+                                    "childrens":[
+                                        {
+                                            "id":12131,"parent":1213,"title":"Title 1.2.1.3.1"
+                                        },
+                                        {
+                                            "id":12132,"parent":1213,"title":"Title 1.2.1.3.2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id":1211,"parent":121,"title":"Title 1.2.1.1"
+                                },
+                                {
+                                    "id":1212,"parent":121,"title":"Title 1.2.1.2"
+                                }
+                            ]
+                        }
+                    ]
+            },
+            {
+                "id":13,"parent":1,"title":"Title 1.3"
+            }
+        ]
+    },
+    {
+        "id":2,"parent":0,"title":"Title 2",
+        "childrens":[
+            {
+                "id":21,"parent":2,"title":"Title 2.1"
+            }
+        ];
+    }
+]
+</xmp></code>
+    </article>
 
-  </article>
-  <a name="toFlatArray"></a>
-  <article>
-    <h1>toFlatArray</h1>
-    <pre> 
-       <p class="signature"></p> TreeOps.toFlatArray(tree, childrenPropertyName, reversible)
 
-    <p class="arg" />
-        tree: hierarchical array
-    
-        childrenPropertyName: name of new property in each node to store childrens. Default is "childs".
-    
-        reversible (boolean): if true, include _id & _parentId to each object of flat array for reversible to tree. Default is false.
-      </p>
+    <a name="toFlatArray"></a>
+    <article>
+      <h2>toFlatArray</h2>
+      <div class="signature">
+        <p> TreeOps.toFlatArray(<i>tree</i>, <i>childrenPropertyName</i>, <i>reversible</i>)</p>
+      </div>
+      <div class="arg">
+        <p><i>tree</i>hierarchical array</p>
+        <p><i>childrenPropertyName</i>name of new property in each node to store childrens. Default is "childs".</p>
+        <p><i>reversible</i>(boolean): if true, include _id & _parentId to each object of flat array for reversible to tree. Default is false.
+        </p>
+      </div>
+
       <p class="example"></p>
-    
+      <code><xmp>
         var tree = [{
             "title": "Title 1",
             "childrens": [{
@@ -258,216 +251,275 @@
             {"title":"Title 2.1"}
         ]
     */
+    </xmp></code>
+    </article>
 
-  </pre>
-  </article>
 
-  <a name="find"></a>
-  <article>
-    <h1>find</h1>
-    <pre>
-    
-      <p class="signature"></p>TreeOps.find(tree, predicateFind, predicateChild, childrenPropertyName = "childs")
-    <p class="arg" /></p>
-        tree: hierarchical array
-    
-        predicateFind: function with 1 parameter (a node) that returns true if the node matches the search
-    
-        predicateChild: function has 2 parameters (2 array elements) that returns true if they are linked by the parent / child relationship.
-    
-        childrenPropertyName: name of new property in each node to store childrens. Default is "childs".
-    
-        reversible (boolean): if true, include _id & _parentId to each object of flat array for reversible to tree. Default is false.
-    
-        <p class="example"></p> 
-    
+    <a name="find"></a>
+    <article>
+      <h2>find</h2>
+      <div class="signature">
+        <p>TreeOps.find(<i>tree</i>, <i>predicateFind</i>, <i>predicateChild</i>, <i>childrenPropertyName</i> = "childs")</p>
+      </div>
+      <div class="arg">
+        <p><i>tree</i>hierarchical array</p>
+
+        <p><i>predicateFind</i>function with 1 parameter (a node) that returns true if the node matches the search
+        </p>
+        <p><i>predicateChild</i>function has 2 parameters (2 array elements) that returns true if they are linked by the parent / child relationship.
+        </p>
+        <p><i>childrenPropertyName</i>name of new property in each node to store childrens. Default is "childs".
+        </p>
+        <p><i>reversible</i>(boolean): if true, include _id & _parentId to each object of flat array for reversible to tree. Default is false.
+        </p>
+      </div>
+
+      <p class="example"></p>
+      <code><xmp>
         var tree = [{
-        "id": 1,
-        "parent": 0,
-        "title": "Title 1",
-        "childrens": [{
-            "id": 11,
-            "parent": 1,
-            "title": "Title 1.1",
-            "childrens": [
-                { "id": 111, "parent": 11, "title": "Title 1.1.1" },
-                {
-                "id": 112,
-                "parent": 11,
-                "title": "Title 1.1.2",
+            "id": 1,
+            "parent": 0,
+            "title": "Title 1",
+            "childrens": [{
+                "id": 11,
+                "parent": 1,
+                "title": "Title 1.1",
                 "childrens": [
-                    { "id": 1121, "parent": 112, "title": "Title 1.1.2.1" }
+                    { "id": 111, "parent": 11, "title": "Title 1.1.1" },
+                    {
+                    "id": 112,
+                    "parent": 11,
+                    "title": "Title 1.1.2",
+                    "childrens": [
+                        { "id": 1121, "parent": 112, "title": "Title 1.1.2.1" }
+                    ]
+                    },
+                    { "id": 113, "parent": 11, "title": "Title 1.1.3" }
                 ]
                 },
-                { "id": 113, "parent": 11, "title": "Title 1.1.3" }
+                {
+                "id": 12,
+                "parent": 1,
+                "title": "Title 1.2",
+                "childrens": [
+                    { "id": 121, "parent": 12, "title": "Title 1.2.1" }
+                ]
+                },
+                { "id": 13, "parent": 1, "title": "Title 1.3" }
             ]
-            },
-            {
-            "id": 12,
-            "parent": 1,
-            "title": "Title 1.2",
-            "childrens": [
-                { "id": 121, "parent": 12, "title": "Title 1.2.1" }
-            ]
-            },
-            { "id": 13, "parent": 1, "title": "Title 1.3" }
+        }];
+        
+        
+            var node1 = TreeOps.find(
+                tree,
+                x => x.id === 1,
+                (node, parentNode) => node.parent === parentNode.id,
+                "childrens"
+            )
+        
+            var node13 = TreeOps.find(
+                tree,
+                x => x.id === 13,
+                (node, parentNode) => node.parent === parentNode.id,
+                "childrens"
+            )
+        
+        
+            var node112 = TreeOps.find(
+                tree,
+                x => x.id === 112,
+                (node, parentNode) => node.parent === parentNode.id,
+                "childrens"
+            )
+        
+            var parentOf112 = TreeOps.find(
+                tree,
+                x => x.childrens && x.childrens.find(y => y.id === 112),
+                (node, parentNode) => node.parent === parentNode.id,
+                "childrens"
+            )
+        
+            /*
+                node1  {"id":1,"parent":0,"title":"Title 1","childrens":[{"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]},{"id":12,"parent":1,"title":"Title 1.2","childrens":[{"id":121,"parent":12,"title":"Title 1.2.1"}]},{"id":13,"parent":1,"title":"Title 1.3"}]}
+        
+        
+            node13 {"id":13,"parent":1,"title":"Title 1.3"}
+        
+        
+            node112 {"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]}
+        
+        
+            parentOf112 {"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]}
+        
+            */
+    </xmp></code>
+    </article>
+
+
+    <a name="selectnew"></a>
+    <article>
+      <h2>selectNew</h2>
+      <div class="signature">
+        <p>TreeOps.selectNew(<i>tree</i>, <i>childrenPropertyName</i> = "childs", ...<i>fieldsNames</i>)</p>
+      </div>
+      <div class="arg">
+        <p><i>tree</i>hierarchical array</p>
+        <p><i>childrenPropertyName</i>name of new property in each node to store childrens. Default is "childs".</p>
+        <p><i>fieldsNames</i>list of fields to keep</p>
+      </div>
+      <p class="example"></p>
+      <code><xmp>
+            var tree=[**example below in table**];
+    
+            tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
+            // select id, tri and children in each node of tree
+    </xmp></code>
+
+      <table class="compare">
+        <tr>
+          <th>Before</th>
+          <th>After</th>
+        </tr>
+        <tr>
+          <td>
+            <code><xmp>
+[
+{ 
+    "id": 1, 
+    "title": "Title 1", 
+    "childrens": [
+    { 
+        "id": 11,
+        "title": "Title 1.1", 
+        "childrens": [ 
+        { 
+            "id": 111, 
+            "title": "Title 1.1.1"
+        }, 
+        { 
+            "id": 112, 
+            "title": "Title 1.1.2", 
+            "childrens": [ 
+            { 
+                "id": 1121, 
+                "title": "Title 1.1.2.1"
+                } 
+            ] 
+        }, 
+        { 
+            "id": 113, 
+            "title":"Title 1.1.3" 
+        }, 
+        { "id": 114, 
+        "title": "Title 1.1.4"
+        } 
         ]
-    }];
-    
-    
-        var node1 = TreeOps.find(
-            tree,
-            x => x.id === 1,
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens"
-        )
-    
-        var node13 = TreeOps.find(
-            tree,
-            x => x.id === 13,
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens"
-        )
-    
-    
-        var node112 = TreeOps.find(
-            tree,
-            x => x.id === 112,
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens"
-        )
-    
-        var parentOf112 = TreeOps.find(
-            tree,
-            x => x.childrens && x.childrens.find(y => y.id === 112),
-            (node, parentNode) => node.parent === parentNode.id,
-            "childrens"
-        )
-    
-        /*
-            node1  {"id":1,"parent":0,"title":"Title 1","childrens":[{"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]},{"id":12,"parent":1,"title":"Title 1.2","childrens":[{"id":121,"parent":12,"title":"Title 1.2.1"}]},{"id":13,"parent":1,"title":"Title 1.3"}]}
-    
-    
-        node13 {"id":13,"parent":1,"title":"Title 1.3"}
-    
-    
-        node112 {"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]}
-    
-    
-        parentOf112 {"id":11,"parent":1,"title":"Title 1.1","childrens":[{"id":111,"parent":11,"title":"Title 1.1.1"},{"id":112,"parent":11,"title":"Title 1.1.2","childrens":[{"id":1121,"parent":112,"title":"Title 1.1.2.1"}]},{"id":113,"parent":11,"title":"Title 1.1.3"}]}
-    
-        */
+        }, 
+        { 
+            "id": 12, 
+            "title": "Title 1.2", 
+            "childrens": [ 
+            { 
+                "id": 121, 
+                "title": "Title 1.2.1" 
+            },
+            { 
+                "id": 122, 
+                "title": "Title 1.2.2" 
+            },
+            { 
+                "id": 123, 
+                "title": "Title 1.2.3"
+                }
+                ] 
+            }, 
+            { 
+                "id": 13,
+                "title": "Title 1.3" 
+            }, 
+            { 
+                "id": 14, 
+                "title": "Title 1.4" 
+            } 
+        ]
+    }
+];
+</xmp></code>
+
+          </td>
+          <td>
+            <code><xmp>
+[
+    { 
+        "title": "Title 1", 
+        "childrens": [
+        { 
+            "title": "Title 1.1",
+            "childrens": [
+            { 
+                "title": "Title 1.1.1"
+            },
+            { 
+                "title": "Title 1.1.2", 
+                "childrens": [ 
+                { 
+                    "title": "Title 1.1.2.1" 
+                } 
+                ]
+            }, 
+            { 
+                "title": "Title 1.1.3" 
+            }, 
+            {
+                "title": "Title 1.1.4" 
+            } 
+        ] 
+    }, 
+    { 
+        "title": "Title 1.2", 
+        "childrens": [ 
+        { 
+            "title": "Title 1.2.1" 
+        }, 
+        { 
+            "title": "Title 1.2.2" 
+        }, 
+        { 
+            "title": "Title 1.2.3" 
+        } 
+        ] 
+    }, 
+    { 
+        "title": "Title 1.3" 
+    },
+    { 
+        "title": "Title 1.4"
+    } 
+    ]
+    }
+];</xmp></code>
+          </td>
+        </tr>
+      </table>
       </pre>
-  </article>
 
-  <a name="selectnew"></a>
-  <article>
-    <h1>selectNew</h1>
-    <pre>
-     <p class="signature"></p> TreeOps.selectNew(tree, childrenPropertyName = "childs", ...fieldsNames)
-    
-    <p class="arg" />
-        tree: hierarchical array
-    
-        childrenPropertyName: name of new property in each node to store childrens. Default is "childs".
-    
-        fieldsNames : list of fields to keep
-        <p class="example"></p> 
-    
-     var tree=[**example below in table**];
-    
-        tree = TreeOps.selectNew(tree, "childrens", "id", "tri");
-        // select id, tri and children in each node of tree
-    <table>
-    <tr><th>Before</th><th>After</th></tr>
-    <tr>
-    <td>
-    
-        [{
-        "id": 1,
-        "title": "Title 1",
-        "childrens": [{
-            "id": 11,
-            "title": "Title 1.1",
-            "childrens": [
-              { "id": 111, "title": "Title 1.1.1"},
-              {
-                "id": 112,
-                "title": "Title 1.1.2",
-                "childrens": [
-                  { "id": 1121, "title": "Title 1.1.2.1" }
-                ]
-              },
-              { "id": 113, "title": "Title 1.1.3" },
-              { "id": 114, "title": "Title 1.1.4" }
-            ]
-          },
-          {
-            "id": 12,
-            "title": "Title 1.2",
-            "childrens": [
-              { "id": 121, "title": "Title 1.2.1" },
-              { "id": 122, "title": "Title 1.2.2" },
-              { "id": 123, "title": "Title 1.2.3" }
-            ]
-          },
-          { "id": 13, "title": "Title 1.3"  },
-          { "id": 14, "title": "Title 1.4" }
-        ]}];
-    </td>
-    <td>
-    
-        [{
-        "title": "Title 1",
-        "childrens": [{
-            "title": "Title 1.1",
-            "childrens": [
-              { "title": "Title 1.1.1"},
-              {
-                "title": "Title 1.1.2",
-                "childrens": [
-                  { "title": "Title 1.1.2.1" }
-                ]
-              },
-              { "title": "Title 1.1.3" },
-              { "title": "Title 1.1.4" }
-            ]
-          },
-          {
-            "title": "Title 1.2",
-            "childrens": [
-              { "title": "Title 1.2.1" },
-              { "title": "Title 1.2.2" },
-              { "title": "Title 1.2.3" }
-            ]
-          },
-          { "title": "Title 1.3"  },
-          { "title": "Title 1.4" }
-        ]}];
-    </td>
-    </tr>
-    </table>
-  </pre>
+    </article>
 
-  </article>
-
-  <a name="orderby"></a>
-  <article>
-    <h1>orderBy</h1>
-    <pre>  
-    
-    <p class="signature"></p>TreeOps.orderBy(tree, childrenComparaison, childrenPropertyName = "childs")
-    
-    <p class="arg" />
-        tree: hierarchical array
-    
-        childrenComparaison: comparaison function of two nodes (function with 2 arguments)
-    
-        childrenPropertyName: name of new property in each node to store childrens. Default is "childs".
-    
-        <p class="example"></p>
-    
-    var tree=[**example below in table**];
+    <a name="orderby"></a>
+    <article>
+      <h2>orderBy</h2>
+      <div class="signature">
+        <p>TreeOps.orderBy(<i>tree</i>, <i>childrenComparaison</i>, <i>childrenPropertyName</i> = "childs")
+        </p>
+      </div>
+      <div class="arg">
+        <p><i>tree</i>hierarchical array</p>
+        <p><i>childrenComparaison</i>comparaison function of two nodes (function with 2 arguments)</p>
+        <p><i>childrenPropertyName</i>name of new property in each node to store childrens. Default is "childs".</p>
+      </div>
+      <p class="example"></p>
+      <code><xmp>
+        var tree=[**example below in table**];
     
         tree = TreeOps.orderBy(
             tree,
@@ -475,169 +527,169 @@
             "childrens"
         );
         // order the tree according value of tri
-    
-    <table>
-    <tr><th>Before</th><th>After</th></tr>
-    <tr>
-    <td>
-    
-        [
-         {
-              "id": 1,
-              "tri": 5,
-              "title": "Title 1",
-              "childrens": [
-                   {
-                        "id": 11,
-                        "title": "Title 1.1",
-                        "tri": 2,
-                        "childrens": [
-                             {
-                                  "id": 111,
-                                  "title": "Title 1.1.1"
-                             },
-                             {
-                                  "id": 112,
-                                  "title": "Title 1.1.2",
-                                  "tri": 1,
-                                  "childrens": [
-                                       {
-                                            "id": 1121,
-                                            "title": "Title 1.1.2.1"
-                                       }
-                                  ]
-                             },
-                             {
-                                  "id": 113,
-                                  "title": "Title 1.1.3",
-                                  "tri": 5
-                             },
-                                                      {
-                                  "id": 114,
-                                  "title": "Title 1.1.4",
-                                  "tri": 2
-                             }
-                        ]
-                   },
-                   {
-                        "id": 12,
-                        "title": "Title 1.2",
-                        "tri": 2,
-                        "childrens": [
-                             {
-                                  "id": 121,
-                                  "title": "Title 1.2.1",
-                                  "tri": 2
-                             },
-                             
-                             {
-                                  "id": 122,
-                                  "title": "Title 1.2.2",
-                                  "tri": 1
-                             },
-                             {
-                                  "id": 123,
-                                  "title": "Title 1.2.3",
-                                  "tri": 4
-                             }
-                        ]
-                   },
-                   {
-                        "id": 13,
-                        "title": "Title 1.3",
-                        "tri": 7
-                   },
-                    {
-                        "id": 14,
-                        "title": "Title 1.4",
-                        "tri": 6
-                   }
-              ]
-         }]
-        
-    </td>
-    <td>
-    
-          [
-         {
-              "id": 1,
-              "tri": 5,
-              "title": "Title 1",
-              "childrens": [
-                   {
-                        "id": 11,
-                        "title": "Title 1.1",
-                        "tri": 2,
-                        "childrens": [
-                             {
-                                  "id": 111,
-                                  "title": "Title 1.1.1"
-                             },
-                             {
-                                  "id": 112,
-                                  "title": "Title 1.1.2",
-                                  "tri": 1,
-                                  "childrens": [
-                                       {
-                                            "id": 1121,
-                                            "title": "Title 1.1.2.1"
-                                       }
-                                  ]
-                             },
-                             {
-                                  "id": 114,
-                                  "title": "Title 1.1.4",
-                                  "tri": 2
-                             },
-                                                     {
-                                  "id": 113,
-                                  "title": "Title 1.1.3",
-                                  "tri": 5
-                             }
-                        ]
-                   },
-                   {
-                        "id": 12,
-                        "title": "Title 1.2",
-                        "tri": 2,
-                        "childrens": [
-                             {
-                                  "id": 122,
-                                  "title": "Title 1.2.2",
-                                  "tri": 1
-                             },
-                             {
-                                  "id": 121,
-                                  "title": "Title 1.2.1",
-                                  "tri": 2
-                             },
-                             {
-                                  "id": 123,
-                                  "title": "Title 1.2.3",
-                                  "tri": 4
-                             }
-                        ]
-                   },
-                   {
-                        "id": 14,
-                        "title": "Title 1.4",
-                        "tri": 6
-                   },
-                   {
-                        "id": 13,
-                        "title": "Title 1.3",
-                        "tri": 7
-                   }
-              ]
-         }]
-    </td>
-    </tr>
-    </table>
-  </pre>
+    </xmp></code>
 
-  </article>
+      <table class="compare">
+        <tr>
+          <th>Before</th>
+          <th>After</th>
+        </tr>
+        <tr>
+          <td>
+            <code><xmp>
+[{ 
+    "id": 1, 
+    "tri": 5, 
+    "title": "Title 1", 
+    "childrens": [ 
+    { 
+        "id": 11, 
+        "title": "Title 1.1", 
+        "tri": 2, 
+        "childrens": [ 
+        {
+             "id": 111, 
+             "title": "Title 1.1.1"
+        },
+        { 
+            "id": 112, 
+            "title": "Title 1.1.2", 
+            "tri": 1, 
+            "childrens": [ 
+            { 
+                "id": 1121, 
+                "title": "Title 1.1.2.1"
+            } 
+            ] 
+        }, 
+        { 
+            "id": 113, 
+            "title": "Title 1.1.3",
+             "tri": 5
+         }, 
+         { 
+             "id": 114, 
+             "title": "Title 1.1.4", 
+             "tri": 2 
+        } 
+        ] 
+    }, 
+    { 
+        "id": 12, 
+        "title": "Title 1.2", 
+        "tri": 2, 
+        "childrens": [ 
+        { 
+            "id": 121, 
+            "title": "Title 1.2.1", 
+            "tri": 2 
+        }, 
+        { 
+            "id": 122, 
+            "title":"Title 1.2.2", 
+            "tri": 1 
+        }, 
+        { 
+            "id": 123, 
+            "title": "Title 1.2.3", 
+            "tri": 4 
+        } 
+        ] 
+    }, 
+    {
+        "id": 13, 
+        "title": "Title 1.3", 
+        "tri": 7 
+    }, 
+    { 
+        "id": 14, 
+        "title": "Title 1.4", 
+        "tri": 6 
+    } 
+    ] 
+}]
+</xmp></code>
+          </td>
+          <td>
+            <code><xmp>
+[{ 
+    "id": 1, 
+    "tri": 5, 
+    "title": "Title 1", 
+    "childrens": [ 
+    { 
+        "id": 11, 
+        "title": "Title 1.1", 
+        "tri": 2, 
+        "childrens": [ 
+        { 
+            "id": 111, 
+            "title": "Title 1.1.1" 
+        }, 
+        { 
+            "id": 112, 
+            "title": "Title 1.1.2", 
+            "tri": 1, 
+            "childrens": [ 
+            { 
+                "id": 1121, 
+                "title": "Title 1.1.2.1"
+            } 
+            ] 
+        }, 
+        { 
+            "id": 114, 
+            "title": "Title 1.1.4", 
+            "tri": 2 
+        }, 
+        { 
+            "id": 113,
+             "title": "Title 1.1.3", 
+             "tri": 5 
+            } 
+            ] 
+        }, 
+        { 
+            "id": 12,
+             "title": "Title 1.2", 
+             "tri": 2, 
+             "childrens": [ 
+             {
+                 "id": 122, 
+                 "title": "Title 1.2.2", 
+                 "tri": 1 
+            }, 
+            { 
+                "id": 121, 
+                "title":"Title 1.2.1", 
+                "tri": 2 
+            }, 
+            { 
+                "id": 123, 
+                "title": "Title 1.2.3",
+                 "tri": 4 
+            } 
+            ] 
+        }, 
+        { 
+            "id": 14, 
+            "title": "Title 1.4", 
+            "tri": 6 
+        }, 
+        { 
+            "id": 13, 
+            "title": "Title 1.3", 
+            "tri": 7 
+        } 
+        ] 
+    }
+]
+</xmp></code></td>
+        </tr>
+      </table>
 
-
+    </article>
+  </div>
 </body>
 
 </html>

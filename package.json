@@ -1,6 +1,6 @@
 {
   "name": "tree-operations",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "create a tree from an array of objects or a flat array from tree, and others operations on tree",
   "main": "distrib/tree-operations.min.js",
   "scripts": {
@@ -20,7 +20,13 @@
     "filter node",
     "order nodes","front-end","back-end"
   ],
-  "author": "Sylvain Longepée",
+  "author": "sylvain59",
+  "maintainers": [
+    {
+      "name": "sylvain59",
+      "email": "slongepee@laposte.net"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sylvain59650/tree-operations/issues"
